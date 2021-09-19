@@ -1,0 +1,32 @@
+body {
+     position: absolute;
+     margin  : 0;
+     border  : 0;
+     padding : 0;
+     top     : 0;
+     bottom  : 0;
+     left    : 0;
+     right   : 0;
+     width   : 100%;
+     height  : 100%;
+     background-image: url('../../img/backgrounds/bg.jpg') !important;
+     background-size: cover !important;
+     background-attachment: fixed;
+     border: 0 !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+footer {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     margin: 0;
+     padding-right: 10%;
+     padding-bottom: 10px;
+     text-align: right;
+     font-size: 11px;
+     border: 0;
+}
