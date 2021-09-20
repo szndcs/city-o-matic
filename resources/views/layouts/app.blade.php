@@ -8,7 +8,7 @@
           <meta name="revisit-after" content="14 days" />
           <meta name="csrf-token" content="{{ csrf_token() }}">
           <link rel="icon" type="image/png" href="favicon.png" />
-          <title>{{ config('app.name') }}</title>
+          <title>{{ config('app.name') }} - {{ config('app.version') }}</title>
           <!-- jQuery -->
           <script src="assets/js/jquery-3.5.1/jquery-3.5.1.min.js"></script>
           <!-- Semantic UI -->

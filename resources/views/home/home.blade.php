@@ -208,6 +208,6 @@
 
 @section('footer')
                <!-- FOOTER -->
-               <footer>{{ config('app.name') }} <i class='heart outline icon'></i> {{ Illuminate\Foundation\Application::VERSION }}</strong> (PHP v{{ PHP_VERSION }})</footer>
+               <footer>{{ config('app.name') }} {{ config('app.version') }} <i class='heart outline icon'></i> Laravel {{ Illuminate\Foundation\Application::VERSION }}</strong> (PHP {{ PHP_VERSION }})</footer>
                <!-- /FOOTER -->
 @endsection
