@@ -28,6 +28,7 @@
 
                </div>
           </div>
+
 @yield('footer')
 
 @yield('scripts', '')

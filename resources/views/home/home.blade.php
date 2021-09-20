@@ -12,7 +12,7 @@
                               <div class="default text">Válasszon</div>
                               <div class="menu">
 @foreach ($countiesArray as $county)
-                                        <div class="item" data-value="{{ $county->id }}" data-text="{{ $county->name }}">{{ $county->name }}</div>
+                                   <div class="item" data-value="{{ $county->id }}" data-text="{{ $county->name }}">{{ $county->name }}</div>
 @endforeach
                               </div>
                               </div>
@@ -20,20 +20,19 @@
                          </div>
                     </form>
                </div>
-               <div class="ui text container segment" id="addCityDiv">
+               <div class="ui text container tertiary olive inverted segment" id="addCityDiv">
                     <form class="ui form" id="addCity">
                          <div class="inline field">
                               <label>Új város:</label>
                               <div class="ui fluid action input">
                                    <input type="text" placeholder="új város neve" id="newCity">
-                                   <button class="ui blue button">Felvesz</button>
+                                   <button class="ui green button">felvesz</button>
                               </div>
                          </div>
                     </form>
                </div>
 
                <div id="cities">
-
                     <table class="ui striped table" id="citiesTable">
                          <thead>
                               <tr>
@@ -49,11 +48,6 @@
                <!-- /CONTENT -->
 @endsection
 
-@section('modals')
-               <!-- MODALS -->
-               <!-- /MODALS -->
-@endsection
-
 @section('scripts')
           <!-- PAGE SCRIPTS -->
           <script>
@@ -65,7 +59,6 @@
                     $('#counties').dropdown();
                     $('#addCityDiv').hide();
                     $('#cities').hide();
-
 
                     // run if a county has selected
                     $('#counties').change( function(){
@@ -108,7 +101,7 @@
                               selectedCityName = $(this).children().children('span').text();
                               selectedCityId = $(this).children().children(':input').val();
                               $(this).children().children().remove();
-                              $(this).children().append("<div class='ui fluid input' id='city-" + selectedCityId + "-input'><input type='text' value='" + selectedCityName + "' id='editCityNameInput'><button class='ui green button' onclick='editCity()'><i class='check icon'></i></button><button class='ui red button' onclick='deleteCity()'><i class='x icon icon'></i></button><button class='ui yellow button' onclick='cityNameEditorRemove()'><i class='undo icon'></i></button></div>");
+                              $(this).children().append("<div class='ui fluid input' id='city-" + selectedCityId + "-input'><input type='text' value='" + selectedCityName + "' id='editCityNameInput'><button class='circular ui green icon button' onclick='editCity()'><i class='check icon'></i></button><button class='circular ui red icon button' onclick='deleteCity()'><i class='x icon icon'></i></button><button class='circular ui yellow icon button' onclick='cityNameEditorRemove()'><i class='undo icon'></i></button></div>");
                               isItClickable = false;
                          }
                     })
@@ -207,7 +200,7 @@
 @endsection
 
 @section('footer')
-               <!-- FOOTER -->
-               <footer>{{ config('app.name') }} {{ config('app.version') }} <i class='heart outline icon'></i> Laravel {{ Illuminate\Foundation\Application::VERSION }}</strong> (PHP {{ PHP_VERSION }})</footer>
-               <!-- /FOOTER -->
+          <!-- FOOTER -->
+          <footer>{{ config('app.name') }} {{ config('app.version') }} <i class='heart outline icon'></i> Laravel {{ Illuminate\Foundation\Application::VERSION }}</strong> (PHP {{ PHP_VERSION }})</footer>
+          <!-- /FOOTER -->
 @endsection
